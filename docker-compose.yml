@@ -1,0 +1,26 @@
+version: '3.9'
+
+services:
+  shop-db:
+    container_name: shop-db
+    image: mysql:8.0.29
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: admin
+    volumes:
+      - db-vol:/var/lib/mysql
+    ports:
+      - 3307:3306
+  phpmyadmin:
+    container_name: test-phpmyadmin
+    image: phpmyadmin/phpmyadmin:5.2.0
+    restart: always
+    ports:
+      - 8080:80
+    links:
+      - shop-db:db
+    depends_on:
+      - shop-db
+
+volumes:
+  db-vol:

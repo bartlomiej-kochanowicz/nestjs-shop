@@ -35,6 +35,9 @@ $ pnpm install
 ## Running the app
 
 ```bash
+# database with phpmyadmin
+$ make up
+
 # development
 $ pnpm start
 
