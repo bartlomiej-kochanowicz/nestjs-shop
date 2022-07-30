@@ -18,6 +18,13 @@ module.exports = {
     jest: true,
   },
   ignorePatterns: ['.eslintrc.js'],
+  settings: {
+    'import/resolver': {
+      node: {
+        paths: ['src'],
+      },
+    },
+  },
   rules: {
     '@typescript-eslint/interface-name-prefix': 'off',
     '@typescript-eslint/explicit-function-return-type': 'off',
@@ -25,5 +32,6 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 'off',
     'import/prefer-default-export': 'off',
     'class-methods-use-this': 'off',
+    '@typescript-eslint/return-await': 'off',
   },
 };

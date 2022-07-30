@@ -14,7 +14,7 @@ export const databaseProviders = [
         database: 'shop-db',
         entities: [join(__dirname, '/../**/*.entity{.ts,.js}')],
         synchronize: true,
-        logger: 'advanced-console',
+        logger: 'debug',
       });
 
       return dataSource.initialize();
