@@ -1,9 +1,10 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { ProductDto } from 'products/dto/product.dto';
+import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
-export class Product {
-  @PrimaryGeneratedColumn()
-  id: number;
+export class ProductEntity extends BaseEntity implements ProductDto {
+  @PrimaryGeneratedColumn('uuid')
+  uuid: string;
 
   @Column({ length: 60 })
   name: string;

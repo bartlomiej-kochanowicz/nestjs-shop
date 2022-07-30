@@ -33,5 +33,6 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'class-methods-use-this': 'off',
     '@typescript-eslint/return-await': 'off',
+    '@typescript-eslint/no-inferrable-types': 'off',
   },
 };
