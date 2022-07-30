@@ -2,7 +2,7 @@ import { ProductDto } from 'products/dto/product.dto';
 import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
-export class ProductEntity extends BaseEntity implements ProductDto {
+class Product extends BaseEntity implements ProductDto {
   @PrimaryGeneratedColumn('uuid')
   uuid: string;
 
@@ -18,3 +18,5 @@ export class ProductEntity extends BaseEntity implements ProductDto {
   @Column('int')
   quantity: number;
 }
+
+export { Product as ProductEntity };
